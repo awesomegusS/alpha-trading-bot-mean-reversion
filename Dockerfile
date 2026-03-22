@@ -15,7 +15,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN pip install --no-cache-dir yfinance pandas numpy statsmodels alpaca-trade-api prefect
 
 # Copy the execution flow into the container
-COPY stat_arb_flow.py /app/stat_arb_flow.py
+COPY src/stat_arb_flow.py /app/stat_arb_flow.py
 
 # The command to run the Prefect flow when the container starts
 CMD ["python", "stat_arb_flow.py"]
