@@ -90,7 +90,7 @@ def run_pairs_backtest(ticker1, ticker2, period="2y", entry_z=2.0, exit_z=0.0, f
     print(f"Total Trades: {num_trades}\n")
 
 if __name__ == "__main__":
-    pairs_to_test = [("BAC", "MS"), ("PNC", "USB"), ("BAC", "GS")]
+    pairs_to_test = [("BAC", "MS"), ("PNC", "USB"), ("BAC", "GS"), ("CI", "ELV")]
     
     print("=" * 40)
     print("STATISTICAL ARBITRAGE BACKTEST RESULTS")
