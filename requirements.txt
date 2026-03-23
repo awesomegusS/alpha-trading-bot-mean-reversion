@@ -3,5 +3,5 @@ pandas
 numpy
 statsmodels
 alpaca-trade-api
-alpha_vantage
+alpha_vantage==2.3.1
 prefect
