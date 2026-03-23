@@ -12,7 +12,14 @@ ENV TZ="America/New_York"
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Install Python dependencies
-RUN pip install --no-cache-dir yfinance pandas numpy statsmodels alpaca-trade-api prefect
+# Copy the requirements file into the container FIRST
+COPY requirements.txt /app/requirements.txt
+
+# Install dependencies strictly from the file
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the execution flow into the container
+COPY src/ /app/src/
 
 # Copy the execution flow into the container
 COPY src/stat_arb_flow.py /app/stat_arb_flow.py
