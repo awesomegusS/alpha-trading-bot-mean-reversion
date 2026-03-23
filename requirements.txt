@@ -3,4 +3,5 @@ pandas
 numpy
 statsmodels
 alpaca-trade-api
+alpha_vantage
 prefect
