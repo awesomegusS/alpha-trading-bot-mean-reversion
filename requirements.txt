@@ -4,7 +4,8 @@
 # statsmodels
 # alpaca-trade-api
 # alpha_vantage==2.3.1
-prefectaiohappyeyeballs==2.6.1
+# prefect
+aiohappyeyeballs==2.6.1
 aiohttp==3.13.3
 aiosignal==1.4.0
 aiosqlite==0.22.1
